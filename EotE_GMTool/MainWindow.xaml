@@ -1,0 +1,40 @@
+﻿<Window x:Class="EotE_GMTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="505" 
+        Width="537"
+        FontFamily="./Fonts/#TIE-Wing" 
+        FontSize="16"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        >
+    <Window.Background>
+        <SolidColorBrush Color="Black"/>
+    </Window.Background>
+    <Window.Foreground>
+        <SolidColorBrush Color="White"/>
+    </Window.Foreground>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="Main Menu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                <StackPanel>
+                    <Button Name="btn_Play" Content="Play" Margin="2" FontSize="18"/>
+                    <Button Name="btn_CreateCharacter" Content="Create Character" Margin="2"/>
+                    <Button Name="btn_EditCharacter" Content="Edit Character" Margin="2"/>
+                    <Button Name="btn_Rulebook" Content="Rules" Margin="2" Click="btn_Rulebook_Click" />
+                    <Button Name="btn_Galaxy" Content="Galaxy" Margin="2" Click="btn_Galaxy_Click" />
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="GM Utilities" Visibility="{Binding VisibleForGm}"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Grid.Row="1">
+                <StackPanel>
+                    <Button Name="btn_CreateCampaign" Content="Create Campaign" Margin="2"/>
+                    <Button Name="btn_EditCampaign" Content="Edit Campaign" Margin="2"/>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+        <Image Source="Assets/scout.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="400" />
+    </Grid>
+</Window>

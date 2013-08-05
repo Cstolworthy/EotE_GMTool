@@ -1,0 +1,31 @@
+﻿<Window x:Class="EotE_GMTool.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EotE GM Tool" 
+        FontFamily="./Fonts/#TIE-Wing" 
+        FontSize="16" 
+        Height="319" 
+        Width="466"
+        >
+    <Window.Background>
+        <ImageBrush ImageSource="/Assets/space.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Name="btn_Players" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Click="btn_Players_OnClick" >
+            <StackPanel >
+                <Image Source="Assets/rebel_tb.png"   Width="150" Height="150" />
+                <Label Content="Players" Foreground="White" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button Name="btn_GM" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Grid.Column="1" Click="btn_GM_OnClick">
+            <StackPanel >
+                <Image Source="Assets/empire_tb.png"   Width="150" Height="150"/>
+                <Label Content="GM" Foreground="White" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>

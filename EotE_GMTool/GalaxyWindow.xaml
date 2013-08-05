@@ -1,0 +1,12 @@
+﻿<Window x:Class="EotE_GMTool.GalaxyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="The Known Galaxy" SizeToContent="WidthAndHeight">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+            <Viewbox>
+                <Image Source="Assets/Galaxy.png"/>
+            </Viewbox>
+        </ScrollViewer>
+    </Grid>
+</Window>
