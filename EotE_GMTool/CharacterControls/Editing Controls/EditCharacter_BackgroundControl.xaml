@@ -1,0 +1,17 @@
+﻿<editingControls:EditCharacter_Control x:Class="EotE_GMTool.CharacterControls.Editing_Controls.EditCharacter_BackgroundControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:editingControls="clr-namespace:EotE_GMTool.CharacterControls.Editing_Controls"
+             mc:Ignorable="d" 
+             DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+            <TextBlock TextWrapping="Wrap" Text="As you begin sketching out your character's background, consider the general status level of the character's previous life.  Did they come from squalor and poverty?  Did they live a comfortable life?  Were they destined for a greater position later on?  Even something as simple as 'my character was a formerly wealthy heir to a noble family' provides a wealth of ideas on which to build their backstory and help determine both starting Obligation and Motivation.  Backgrounds are not mechanical aspects of development.  Instead, they are thematic facets of a character that help define them as more than a set of numbers.  Players do not need to give a background, but their characters are likely to be far more interesting with them." />
+            <TextBox Grid.Row="1" Name="tbx_Description" AcceptsReturn="True" AcceptsTab="True" Text="{Binding Character.Background}"/>
+    </Grid>
+</editingControls:EditCharacter_Control>

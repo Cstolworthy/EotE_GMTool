@@ -1,0 +1,95 @@
+﻿<Window x:Class="EotE_GMTool.EditCharacterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        mc:Ignorable="d" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="Character Creation" 
+        d:DesignHeight="497" 
+        d:DesignWidth="645" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Margin="2">
+            <Label Content="Player Name: "/>
+            <TextBox MinWidth="100" Text="{Binding Character.Name}"/>
+        </WrapPanel>
+        <WrapPanel Margin="2" HorizontalAlignment="Right">
+            <Label Content="Available XP: "/>
+            <Label Content="{Binding Character.AvailableExperience}"/>
+        </WrapPanel>
+        <TabControl TabStripPlacement="Left" Margin="2" Grid.Row="1">
+            <TabItem Name="t_Background">
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Step 1: Background" Width="75" TextWrapping="Wrap"></TextBlock>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+                <Grid Name="g_Background"/>
+            </TabItem>
+            <TabItem Name="t_Obligation">
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Step 2: Obligation" Width="75" TextWrapping="Wrap"></TextBlock>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+                <Grid Name="g_Obligation"/>
+            </TabItem>
+            <TabItem Name="t_Species">
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Step 3: Species" Width="75" TextWrapping="Wrap"></TextBlock>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+                <Grid Name="g_Species"/>
+            </TabItem>
+            <TabItem Name="t_Careers">
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Step 4 and 5: Career" Width="75" TextWrapping="Wrap"/>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+                <Grid Name="g_Careers"/>
+            </TabItem>
+            <TabItem Name="t_Experience">
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Step 6: Experience" Width="75" TextWrapping="Wrap"></TextBlock>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+                <Grid Name="g_Experience"/>
+            </TabItem>
+            <TabItem Name="t_Derived">
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Step 7: Derived Stats" Width="75" TextWrapping="Wrap"></TextBlock>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+                <Grid Name="g_Derived"/>
+            </TabItem>
+            <TabItem Name="t_Gear">
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Step 8:     Gear" Width="75" TextWrapping="Wrap"></TextBlock>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+                <Grid Name="g_Gear"/>
+            </TabItem>
+            <TabItem Name="t_FinishingTouches">
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Step 9: Cosmetics" Width="75" TextWrapping="Wrap"></TextBlock>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+                <Grid Name="g_FinishingTouches"/>
+            </TabItem>
+        </TabControl>
+        <WrapPanel Grid.Row="2" HorizontalAlignment="Center" Margin="10">
+            <Button Name="btn_Save" Content="Save" Height="30" Width="50" Click="btn_Save_Click" />
+        </WrapPanel>
+    </Grid>
+</Window>
