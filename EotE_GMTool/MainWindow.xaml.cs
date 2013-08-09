@@ -13,13 +13,14 @@ using System.Windows.Shapes;
 using EotE_GMTool.Objects;
 using System.IO;
 using System.Diagnostics;
+using System.Runtime.Serialization.Formatters.Binary;
+using Microsoft.Win32;
 
 namespace EotE_GMTool {
 
     public partial class MainWindow : Window {
         public User User { get; set; }
-        public MainWindow ( User user )
-        {
+        public MainWindow ( User user ) {
             User = user;
             Title = MainMenuLabel;
             InitializeComponent();
@@ -41,8 +42,7 @@ namespace EotE_GMTool {
             new GalaxyWindow().Show();
         }
 
-        private void btn_Rulebook_Click ( object sender, RoutedEventArgs e )
-        {
+        private void btn_Rulebook_Click ( object sender, RoutedEventArgs e ) {
             const string filepath = "SW-EotE Beta Rulebook.pdf";
             //var di = Directory.GetFiles("");
             if (File.Exists(filepath))
@@ -51,6 +51,23 @@ namespace EotE_GMTool {
 
         #endregion
 
+        private void btn_CreateCharacter_Click ( object sender, RoutedEventArgs e ) {
+            var window = new EditCharacterWindow(null);
+            window.ShowDialog();
+        }
 
+        private void btn_EditCharacter_Click ( object sender, RoutedEventArgs e ) {
+            //var ofd = new OpenFileDialog();
+            //ofd.ShowDialog();
+            //if (!ofd.CheckFileExists) return;
+            //var filename = ofd.FileName;
+            //var stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
+            var stream = new FileStream("Scooter.bin", FileMode.Open, FileAccess.Read);
+            var formatter = new BinaryFormatter();
+            var character = (Character)formatter.Deserialize(stream);
+            stream.Close();
+            var window = new EditCharacterWindow(character);
+            window.ShowDialog();
+        }
     }
 }

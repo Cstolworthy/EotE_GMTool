@@ -55,13 +55,90 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CharacterControls\EditCharacterWindow.xaml.cs">
+      <DependentUpon>EditCharacterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CharacterControls\Editing Controls\EditCharacter_BackgroundControl.xaml.cs">
+      <DependentUpon>EditCharacter_BackgroundControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CharacterControls\Editing Controls\EditCharacter_CareerControl.xaml.cs">
+      <DependentUpon>EditCharacter_CareerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CharacterControls\Editing Controls\EditCharacter_Control.cs" />
+    <Compile Include="CharacterControls\Editing Controls\EditCharacter_ObligationControl.xaml.cs">
+      <DependentUpon>EditCharacter_ObligationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CharacterControls\Editing Controls\EditCharacter_SpeciesControl.xaml.cs">
+      <DependentUpon>EditCharacter_SpeciesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\Characters\Career\Bounty Hunter\Assassin.cs" />
+    <Compile Include="Objects\Characters\Career\Bounty Hunter\BountyHunter.cs" />
+    <Compile Include="Objects\Characters\Career\Bounty Hunter\Gadgeteer.cs" />
+    <Compile Include="Objects\Characters\Career\Bounty Hunter\Survivalist.cs" />
+    <Compile Include="Objects\Characters\Career\Colonist\Colonist.cs" />
+    <Compile Include="Objects\Characters\Career\Colonist\Doctor.cs" />
+    <Compile Include="Objects\Characters\Career\Colonist\Politico.cs" />
+    <Compile Include="Objects\Characters\Skills\CoreWorlds.cs" />
+    <Compile Include="Objects\Characters\Skills\Astrogation.cs" />
+    <Compile Include="Objects\Characters\Skills\Athletics.cs" />
+    <Compile Include="Objects\Characters\Skills\Brawl.cs" />
+    <Compile Include="Objects\Characters\Skills\Charm.cs" />
+    <Compile Include="Objects\Characters\Skills\Coerce.cs" />
+    <Compile Include="Objects\Characters\Skills\Computers.cs" />
+    <Compile Include="Objects\Characters\Skills\Cool.cs" />
+    <Compile Include="Objects\Characters\Skills\Coordination.cs" />
+    <Compile Include="Objects\Characters\Skills\Deceit.cs" />
+    <Compile Include="Objects\Characters\Skills\Discipline.cs" />
+    <Compile Include="Objects\Characters\Skills\Education.cs" />
+    <Compile Include="Objects\Characters\Skills\Gunnery.cs" />
+    <Compile Include="Objects\Characters\Skills\HeavyRanged.cs" />
+    <Compile Include="Objects\Characters\Skills\Leadership.cs" />
+    <Compile Include="Objects\Characters\Skills\LightRanged.cs" />
+    <Compile Include="Objects\Characters\Skills\Lore.cs" />
+    <Compile Include="Objects\Characters\Skills\Mechanics.cs" />
+    <Compile Include="Objects\Characters\Skills\Medicine.cs" />
+    <Compile Include="Objects\Characters\Skills\Melee.cs" />
+    <Compile Include="Objects\Characters\Skills\Negotiate.cs" />
+    <Compile Include="Objects\Characters\Skills\OuterRim.cs" />
+    <Compile Include="Objects\Characters\Skills\Perception.cs" />
+    <Compile Include="Objects\Characters\Skills\PilotPlanetary.cs" />
+    <Compile Include="Objects\Characters\Skills\PilotSpace.cs" />
+    <Compile Include="Objects\Characters\Skills\Resilience.cs" />
+    <Compile Include="Objects\Characters\Skills\Skulduggery.cs" />
+    <Compile Include="Objects\Characters\Skills\Stealth.cs" />
+    <Compile Include="Objects\Characters\Skills\Streetwise.cs" />
+    <Compile Include="Objects\Characters\Skills\Survival.cs" />
+    <Compile Include="Objects\Characters\Skills\Underworld.cs" />
+    <Compile Include="Objects\Characters\Skills\Vigilance.cs" />
+    <Compile Include="Objects\Characters\Skills\Xenology.cs" />
     <Compile Include="Objects\Characters\Species\Bothan.cs" />
     <Compile Include="Objects\Characters\Species\Droid.cs" />
     <Compile Include="Objects\Characters\Species\Gand.cs" />
     <Compile Include="Objects\Characters\Species\Human.cs" />
     <Compile Include="Objects\Characters\Species\Rodian.cs" />
     <Compile Include="Objects\Characters\Species\Trandoshan.cs" />
-    <Compile Include="UtilityController.cs" />
+    <Compile Include="Objects\Characters\Species\Twilek.cs" />
+    <Compile Include="Objects\Characters\Species\Wookiee.cs" />
+    <Page Include="CharacterControls\EditCharacterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CharacterControls\Editing Controls\EditCharacter_BackgroundControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CharacterControls\Editing Controls\EditCharacter_CareerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CharacterControls\Editing Controls\EditCharacter_ObligationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CharacterControls\Editing Controls\EditCharacter_SpeciesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GalaxyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

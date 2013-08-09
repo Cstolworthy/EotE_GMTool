@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 
 namespace EotE_GMTool.Objects.Characters.Species {
+    [Serializable]
     public class Rodian : Species {
         public Rodian()
         {
             StartingXp = 100;
             StartingWoundThreshold = 10;
             StartingStrainThreshold = 10;
-            SpecialAbilities = new List<string>() { "Begin the game with one rank in Survival.  May not train Survivial above rank 2 during character creation."};
+            SpecialAbilities = "Begin the game with one rank in Survival.  May not train Survivial above rank 2 during character creation.";
             StartingBrawn = 2;
             StartingPresence = 2;
             StartingIntellect = 2;
@@ -25,6 +26,10 @@ namespace EotE_GMTool.Objects.Characters.Species {
                 "    Rodians because so proficient at hunting that they gradually forced most of Rodia's other predators into extinction.  With nothing much left to hunt, they turned on each other.  Gladatorial hunts became the main method of resolving disputes between two Rodians, with the survivor being named the victor.  Over time, these contests tilted into skirmishes and then wars between twibes, later acted out in Rodian drama.  The appearance of Old Republic scouts gave Rodians a new challenge.  They hunted down the scouts and al foreigners who landed on Rodia.  The world was nearly placed on the Republic's 'no-fly' list when the Rodian leader, the Grand Protector of the Hunt, did something unparalleled in Rodian History; he called off the hunt.  He convinced his people that the off-worlders could show them the stars, where they could hunt until the end of time." +
                 Environment.NewLine +
                 "    Though small feuds and hunts continue on Rodia, the planet's main industry is arms manufacture.  As their ancestors did in days gone by, Rodians use their latent talent in weapon-making to craft blasters ideally suited to mercenaries and bounty hunters.";
+        }
+
+        public override string ToString ( ) {
+            return "Rodian";
         }
     }
 }
