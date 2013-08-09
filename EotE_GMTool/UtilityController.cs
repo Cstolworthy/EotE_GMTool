@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EotE_GMTool.Objects.Characters.Career {
-    class Specialization {
+namespace EotE_GMTool {
+    public class UtilityController {
     }
 }

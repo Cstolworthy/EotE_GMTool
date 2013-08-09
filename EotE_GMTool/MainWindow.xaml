@@ -22,8 +22,8 @@
             <GroupBox Header="Main Menu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                 <StackPanel>
                     <Button Name="btn_Play" Content="Play" Margin="2" FontSize="18"/>
-                    <Button Name="btn_CreateCharacter" Content="Create Character" Margin="2" Click="btn_CreateCharacter_Click" />
-                    <Button Name="btn_EditCharacter" Content="Edit Character" Margin="2" Click="btn_EditCharacter_Click" />
+                    <Button Name="btn_CreateCharacter" Content="Create Character" Margin="2"/>
+                    <Button Name="btn_EditCharacter" Content="Edit Character" Margin="2"/>
                     <Button Name="btn_Rulebook" Content="Rules" Margin="2" Click="btn_Rulebook_Click" />
                     <Button Name="btn_Galaxy" Content="Galaxy" Margin="2" Click="btn_Galaxy_Click" />
                 </StackPanel>
