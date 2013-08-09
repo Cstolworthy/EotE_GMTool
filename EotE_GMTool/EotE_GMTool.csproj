@@ -78,6 +78,12 @@
     <Compile Include="Objects\Characters\Career\Colonist\Colonist.cs" />
     <Compile Include="Objects\Characters\Career\Colonist\Doctor.cs" />
     <Compile Include="Objects\Characters\Career\Colonist\Politico.cs" />
+    <Compile Include="Objects\Characters\Career\Colonist\Scholar.cs" />
+    <Compile Include="Objects\Characters\Career\Explorer\Explorer.cs" />
+    <Compile Include="Objects\Characters\Career\Explorer\Fringer.cs" />
+    <Compile Include="Objects\Characters\Career\Explorer\Scout.cs" />
+    <Compile Include="Objects\Characters\Career\Explorer\Trader.cs" />
+    <Compile Include="Objects\Characters\Career\Hired Gun\HiredGun.cs" />
     <Compile Include="Objects\Characters\Skills\CoreWorlds.cs" />
     <Compile Include="Objects\Characters\Skills\Astrogation.cs" />
     <Compile Include="Objects\Characters\Skills\Athletics.cs" />
